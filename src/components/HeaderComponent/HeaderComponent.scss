@@ -1,0 +1,71 @@
+.wrapper-header {
+    display: flex; /* Sử dụng flexbox để dàn ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    padding: 10px 40px; /* Giảm padding để tạo không gian thoáng hơn */
+    background-color: #007bff; /* Màu nền xanh biển sang trọng */
+    height: 60px;
+
+    .wrapper-text-header {
+        font-size: 24px; /* Kích thước chữ lớn hơn */
+        color: #fff; /* Màu chữ trắng để nổi bật */
+        font-weight: bold;
+        text-align: left; /* Căn trái */
+        display: flex;
+        align-items: center; /* Canh giữa theo chiều dọc */
+        height: 100%; /* Đảm bảo chiều cao của phần tử bằng 100% chiều cao cha */
+        transition: color 0.3s; /* Thêm hiệu ứng chuyển màu */
+        cursor: pointer;
+        
+
+    }
+
+    .wrapper-header-notification {
+        display: flex;
+        align-items: center; /* Căn giữa các biểu tượng theo chiều dọc */
+        justify-content: center; /* Căn giữa các biểu tượng theo chiều ngang */
+        color: #fff; /* Màu chữ trắng */
+        gap: 20px;
+        font-size: 14px; /* Kích thước chữ lớn hơn */
+        padding-left: 10px;
+        height: 100%; /* Đảm bảo chiều cao bằng 100% để canh giữa chính xác */
+        transition: color 0.3s; /* Thêm hiệu ứng chuyển màu */
+        cursor: pointer;
+        
+        .icon {
+            font-size: 24px; /* Kích thước icon nhỏ hơn để tạo sự cân đối */
+            color: #fff;
+            transition: transform 0.3s; /* Thêm hiệu ứng chuyển động */
+            
+            &:hover {
+                transform: scale(1.2); /* Tăng kích thước khi hover */
+            }
+        }
+
+        .text {
+            font-size: 14px; /* Kích thước văn bản lớn hơn */
+        }
+    }
+
+    .wrapper-header-account {
+        display: flex;
+        align-items: center; /* Căn giữa các biểu tượng theo chiều dọc */
+        justify-content: center; /* Căn giữa các biểu tượng theo chiều ngang */
+        color: #fff; /* Màu chữ trắng */
+        gap: 10px;
+        font-size: 14px; /* Kích thước chữ lớn hơn */
+        padding-left: 10px;
+        height: 100%; /* Đảm bảo chiều cao bằng 100% để canh giữa chính xác */
+        transition: color 0.3s; /* Thêm hiệu ứng chuyển màu */
+        cursor: pointer;
+        
+        .icon {
+            font-size: 24px; /* Kích thước icon nhỏ hơn để tạo sự cân đối */
+            transition: transform 0.3s; /* Thêm hiệu ứng chuyển động */
+            
+        }
+
+        .text {
+            font-size: 14px; /* Kích thước văn bản lớn hơn */
+        }
+    }
+}

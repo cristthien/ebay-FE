@@ -1,0 +1,64 @@
+.order-tracking-container {
+    padding: 40px; // Tăng padding cho trang
+    max-width: 900px; // Mở rộng chiều rộng tối đa
+    margin: 0 auto;
+    background: #f7f7f7; // Màu nền nhẹ nhàng
+
+    h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 2.5em; // Tăng kích thước font
+        color: #333;
+    }
+
+    .order-list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px; // Khoảng cách giữa các đơn hàng
+    }
+
+    .order-item {
+        background: #ffffff; // Nền trắng cho đơn hàng
+        border: 1px solid #ddd; // Đường viền cho đơn hàng
+        border-radius: 8px; // Bo góc
+        padding: 20px; // Tăng padding
+        cursor: pointer; // Con trỏ khi hover
+        transition: all 0.3s ease; // Hiệu ứng chuyển động
+
+        &:hover {
+            background: #f0f0f0; // Màu nền khi hover
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); // Đổ bóng khi hover
+        }
+
+        h3 {
+            margin: 0 0 10px 0; // Khoảng cách dưới tiêu đề
+            color: #007bff; // Màu sắc cho tiêu đề đơn hàng
+        }
+
+        p {
+            margin: 5px 0; // Khoảng cách giữa các dòng thông tin
+            color: #555; // Màu sắc thông tin
+        }
+    }
+
+    .order-details-modal {
+        .order-details {
+            text-align: left;
+
+            h2 {
+                margin-bottom: 20px;
+                font-size: 2em; // Kích thước tiêu đề chi tiết đơn hàng
+                color: #333;
+            }
+
+            p {
+                margin: 10px 0;
+                font-size: 1.1em; // Kích thước font lớn hơn
+            }
+
+            button {
+                margin-top: 20px; // Khoảng cách cho nút hủy
+            }
+        }
+    }
+}

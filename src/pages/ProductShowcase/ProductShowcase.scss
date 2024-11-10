@@ -1,0 +1,71 @@
+.product-showcase-container {
+  padding: 20px;
+
+  // Style cho các tiêu đề
+  h2 {
+    font-size: 1.8rem; // Tăng kích thước chữ
+    font-weight: 700; // Đậm hơn
+    color: #333; // Màu tối sang trọng
+    margin-bottom: 20px;
+    position: relative;
+    text-transform: uppercase; // Chữ in hoa để nhấn mạnh
+    letter-spacing: 1px; // Khoảng cách giữa các chữ cái
+
+    // Đường viền dưới để tạo điểm nhấn
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 50px;
+      height: 3px;
+      background-color: #4a90e2; // Màu nổi bật
+      border-radius: 2px;
+    }
+  }
+
+  .product-row {
+    display: flex;
+    overflow-x: auto; // Cho phép cuộn ngang
+    gap: 10px; // Khoảng cách giữa các sản phẩm
+    cursor: grab; // Đổi con trỏ chuột khi rê qua
+    padding: 10px 0;
+  }
+
+  .product-row:active {
+    cursor: grabbing; // Đổi con trỏ khi kéo
+  }
+
+  .circular-card {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease; // Thêm hiệu ứng chuyển đổi
+
+    &:hover {
+      transform: scale(1.1); // Mở rộng thẻ khi hover
+      background-color: #ececec; // Đổi màu nền khi hover
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); // Thêm bóng khi hover
+    }
+  }
+
+  .item-text {
+    text-align: center;
+    font-size: 12px;
+    color: #333;
+    transition: color 0.3s ease; // Thêm hiệu ứng chuyển màu chữ
+
+    .circular-card:hover & {
+      color: #555; // Đổi màu chữ khi hover
+    }
+  }
+}
+
+

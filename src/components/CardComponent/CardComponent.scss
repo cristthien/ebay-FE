@@ -1,0 +1,31 @@
+.card-container {
+    position: relative;
+    .heart-icon {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 24px;
+      color: white;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+    .heart-icon:hover {
+      color: white; /* Màu sắc khi hover */
+    }
+    .card-product-name {
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 16px;
+      color: rgb(56, 56, 61);
+    }
+    .card-product-price {
+      font-size: 12px;
+      color: rgb(128, 128, 137);
+    }
+    .card-product-price-original {
+      font-size: 10px;
+      color: rgb(128, 128, 137);
+      text-decoration: line-through;
+    }
+  }
+  

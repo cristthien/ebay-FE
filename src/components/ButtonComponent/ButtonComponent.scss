@@ -1,0 +1,25 @@
+// Khai báo các biến màu sắc và kích thước
+$button-background: rgba(13, 92, 182, 0.8); // Màu nền nhạt hơn
+$button-border-color: #fff; // Màu viền trắng nhạt
+$button-border-radius: 8px; // Bán kính bo góc
+
+.button-component {
+    background-color: $button-background;
+    border: 1px solid $button-border-color; // Thêm đường viền
+    border-radius: $button-border-radius; // Áp dụng bo góc
+    padding: 10px 20px; // Padding cho nút
+    font-size: 16px; // Kích thước chữ
+    font-weight: bold; // Chữ đậm
+    color: #fff; // Màu chữ trắng
+    transition: transform 0.3s, background-color 0.3s; // Hiệu ứng chuyển màu và phóng to
+
+    // Hiệu ứng hover
+    &:hover {
+        background-color: rgba(13, 92, 182, 1); // Màu nền đậm hơn khi hover
+        transform: scale(1.05); // Phóng to nhẹ khi hover
+    }
+
+    .text {
+        color: #fff; // Màu chữ trắng
+    }
+}

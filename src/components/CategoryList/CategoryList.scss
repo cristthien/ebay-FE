@@ -1,0 +1,31 @@
+.category-list-container {
+    padding: 20px;
+    background-color: #fff; // Màu nền nhẹ nhàng
+    border-radius: 8px; // Bo góc
+    padding-left: 40px;
+
+    .category-title {
+        font-size: 24px; // Kích thước chữ tiêu đề
+        font-weight: bold; // Chữ đậm
+        margin-bottom: 10px; // Khoảng cách dưới tiêu đề
+    }
+
+    .category-items {
+        display: flex; // Sử dụng flexbox để dàn hàng
+        flex-wrap: wrap; // Để các mục tự động xuống dòng khi không đủ không gian
+        gap: 30px; // Tăng khoảng cách giữa các mục
+
+        .category-item {
+            font-size: 16px; // Kích thước chữ cho mỗi mục (giảm kích thước)
+            color: #000; // Màu chữ
+            cursor: pointer; // Con trỏ khi rê chuột
+            transition: color 0.3s; // Hiệu ứng chuyển màu
+
+            // Hiệu ứng hover
+            &:hover {
+                color: rgb(26, 148, 255); // Màu chữ khi hover
+            }
+        }
+    }
+}
+

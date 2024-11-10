@@ -1,0 +1,21 @@
+// src/components/SuggestedProductsComponent/SuggestedProductsComponent.scss
+.suggested-products {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  
+    h2 {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+  
+    .suggested-products-list {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+  }
+  

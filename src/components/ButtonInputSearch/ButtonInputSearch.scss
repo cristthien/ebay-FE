@@ -1,0 +1,43 @@
+// Khai báo các biến màu
+$background-color-input: #fff; // Màu nền của input
+$color-button: rgb(20, 171, 23); // Màu chữ
+$hover-background-color: rgb(10, 70, 150); // Màu nền khi hover
+$border-radius: 4px; // Bán kính bo góc
+
+.button-input-search {
+    display: flex;
+    align-items: center; // Căn giữa theo chiều dọc
+
+    Input.Search {
+        background-color: $color-button;
+    }
+
+    .input-component {
+        background-color: none;
+
+        // Style cho Input.Search
+        .ant-input {
+            border-radius: $border-radius; // Bo góc cho input
+            padding: 10px; // Padding cho input
+            font-size: 16px; // Kích thước chữ
+            transition: border-color 0.3s; // Hiệu ứng khi focus
+
+            &:focus {
+                border-color: $color-button; // Đổi màu viền khi focus
+                box-shadow: 0 0 5px rgba(13, 92, 182, 0.5); // Đổ bóng khi focus
+            }
+        }
+
+        .ant-input-search {
+            border-radius: $border-radius; // Bo góc cho nút tìm kiếm
+            background-color: $color-button; // Màu nền của nút
+            color: #fff; // Màu chữ trên nút
+            transition: background-color 0.3s; // Hiệu ứng chuyển màu
+
+            // Hiệu ứng hover
+            &:hover {
+                background-color: $hover-background-color; // Đổi màu nền khi hover
+            }
+        }
+    }
+}

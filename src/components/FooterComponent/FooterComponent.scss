@@ -1,0 +1,38 @@
+.footer-container {
+  background-color: #f0f4f8; // Màu nền nhẹ
+  padding: 40px 20px;
+  color: #333; // Màu chữ nhẹ
+
+  .footer-content {
+      max-width: 1200px; // Giới hạn chiều rộng
+      margin: auto;
+
+      h3 {
+          font-size: 1.5em;
+          margin-bottom: 10px;
+          color: #007bff; // Màu xanh biển nhẹ
+      }
+
+      .social-icons {
+          display: flex;
+          gap: 15px; // Khoảng cách giữa các biểu tượng
+          font-size: 24px; // Kích thước biểu tượng lớn
+      }
+
+      ul {
+          list-style-type: none; // Bỏ dấu đầu dòng
+          padding: 0;
+
+          li {
+              margin: 5px 0; // Khoảng cách giữa các mục
+          }
+      }
+  }
+
+  .footer-bottom {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 0.9em; // Kích thước chữ nhỏ hơn
+      color: #666; // Màu chữ nhạt hơn
+  }
+}
