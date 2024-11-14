@@ -60,9 +60,9 @@ const RegisterLoginForm = ({ visible, onClose }) => {
                     </div>
                     <p style={{ textAlign: 'center', marginTop: '20px' }}>
                         {isRegisterMode ? 'Already have an account? ' : 'Don\'t have an account? '}
-                        <a onClick={toggleMode} style={{ cursor: 'pointer', color: '#1890ff' }}>
+                        <button onClick={toggleMode} style={{ cursor: 'pointer', color: '#1890ff', background: 'none', border: 'none', padding: 0 }}>
                             {isRegisterMode ? 'Login' : 'Sign up'}
-                        </a>
+                        </button>
                     </p>
                 </Form>
             </Modal>
@@ -71,5 +71,4 @@ const RegisterLoginForm = ({ visible, onClose }) => {
 };
 
 export default RegisterLoginForm;
-
 

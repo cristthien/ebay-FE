@@ -1,37 +1,47 @@
 import React, { useState } from 'react';
-import { Card } from 'antd';
+import { Card, Avatar } from 'antd';
 import { HeartOutlined, HeartFilled } from '@ant-design/icons';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useNavigate } from 'react-router-dom';
 import './CardComponent.scss';
+
+const { Meta } = Card;
 
 const CardComponent = ({ id, name, price, priceoriginal, image }) => {
   const [isFavorite, setIsFavorite] = useState(false);
-  const navigate = useNavigate(); // Khởi tạo useNavigate
+  const navigate = useNavigate();
 
   const toggleFavorite = (e) => {
-    e.stopPropagation(); // Ngăn chặn sự kiện click được truyền lên thẻ Card
+    e.stopPropagation();
     setIsFavorite(!isFavorite);
   };
 
   const handleCardClick = () => {
-    navigate(`/product/${id}`); // Điều hướng tới trang chi tiết sản phẩm
+    navigate(`/product/${id}`);
   };
 
   return (
     <div className="card-container">
       <Card
         hoverable
-        style={{ width: 240 }}
-        bodyStyle={{ padding: '10px' }}
+        style={{ width: 270 }}
         cover={<img alt={name} src={image} />}
-        onClick={handleCardClick} // Thêm sự kiện onClick để điều hướng
+        onClick={handleCardClick}
+
       >
+        <Meta
+          avatar={<Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=8" />}
+          title={name}
+          description={
+            <>
+              <div className="card-product-price">{price}</div>
+              <div className="card-product-price-original">{priceoriginal}</div>
+            </>
+          }
+        />
+        {/* Heart icon for favorite */}
         <span className="heart-icon" onClick={toggleFavorite}>
-          {isFavorite ? <HeartFilled /> : <HeartOutlined />}
+          {isFavorite ? <HeartFilled style={{ color: 'red' }} /> : <HeartOutlined />}
         </span>
-        <div className="card-product-name">{name}</div>
-        <div className="card-product-price">{price}</div>
-        <div className="card-product-price-original">{priceoriginal}</div>
       </Card>
     </div>
   );

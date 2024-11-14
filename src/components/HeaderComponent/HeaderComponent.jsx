@@ -1,7 +1,7 @@
 import React, { useState } from 'react'; 
 import { Link } from 'react-router-dom';
 import { Col, Dropdown, Menu } from 'antd';
-import { UserOutlined, CaretDownOutlined, HeartOutlined, BellOutlined, ContainerOutlined, ShopOutlined } from '@ant-design/icons'; // Import ShopOutlined icon
+import { UserOutlined, CaretDownOutlined, HeartOutlined, ContainerOutlined, ShopOutlined } from '@ant-design/icons'; // Import ShopOutlined icon
 import ButtonInputSearch from '../ButtonInputSearch/ButtonInputSearch';
 import RegisterLoginForm from '../RegisterLoginForm/RegisterLoginForm';
 import './HeaderComponent.scss';

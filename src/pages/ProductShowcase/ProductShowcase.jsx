@@ -61,7 +61,8 @@ const ProductShowcase = () => {
       </div>
 
       {/* Sneaker  */}
-      <h2>Sneaker (Trending today)</h2>
+
+      <h2>Sneaker (Trending today) </h2>
       <div
         className="product-row"
         ref={containerRef}
@@ -80,6 +81,7 @@ const ProductShowcase = () => {
           />
         ))}
       </div>
+
 
 
       {/* Other items on amazing */}

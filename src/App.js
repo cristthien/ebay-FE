@@ -7,6 +7,7 @@ import ProductDetailComponent from './pages/ProductDetailComponent/ProductDetail
 import OrderTrackingPage from './pages/OrderTrackingPage/OrderTrackingPage';
 import CheckoutPage from './pages/CheckoutPage/CheckoutPage';
 import StorePricingPage from './pages/StorePricingPage/StorePricingPage';
+import AdminPage from './pages/AdminPage/AdminPage';
 import { routes } from './routes'; // Đảm bảo đã cập nhật file routes.js
 import 'antd/dist/reset.css';
 import "slick-carousel/slick/slick.css"; 
@@ -40,6 +41,7 @@ function App() {
           <Route path="/orders" element={<OrderTrackingPage />} />
           <Route path="/checkout" element={<CheckoutPage />} />
           <Route path="/store-pricing" element={<StorePricingPage />} />
+          <Route path="/admin" element={<AdminPage />} />
         </Routes>
       </Router>
     </div>

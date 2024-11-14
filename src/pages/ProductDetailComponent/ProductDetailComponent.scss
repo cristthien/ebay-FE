@@ -1,188 +1,182 @@
 .product-detail {
-  
-    .breadcrumb {
-      font-size: 14px;
-      color: #555;
-      margin-bottom: 10px;
-    }
-  
-    .advertisement-bar {
-      background-color: #f8f9fa;
-      padding: 10px;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-  
-    .product-content {
-      display: flex;
-      gap: 20px;
-  
-      .product-images {
-        display: flex;
-        align-items: flex-start; // Đặt các hình ảnh bên trái
+  .breadcrumb {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+  }
+
+  .advertisement-bar {
+    background-color: #f8f9fa;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .product-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+    .product-images {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 10px;
+      
+      .additional-images {
+        display: grid;
         gap: 10px;
-  
-        .additional-images {
-          display: flex;
-          flex-direction: column; // Sắp xếp hình ảnh nhỏ theo chiều dọc
-          gap: 10px;
-          padding-left: 10px;
-  
-          .small-image {
-            width: 100px; // Chiều rộng hình ảnh nhỏ
-            height: auto;
-            border-radius: 8px;
-            border: 1px solid #ddd;
-            transition: transform 0.2s; // Thêm hiệu ứng khi hover
-  
-            &:hover {
-              transform: scale(1.05); // Tăng kích thước khi hover
-              cursor: pointer; // Đổi con trỏ khi hover
-              border-color: #007bff; // Đổi màu viền khi hover
-            }
-          }
-        }
-  
-        .large-image {
-          .main-image {
-            width: 600px; // Đặt kích thước hình lớn là 600px
-            height: 600px; // Đặt chiều cao hình lớn là 600px
-            border-radius: 8px;
-            border: 1px solid #ddd;
+        padding-left: 10px;
+
+        .small-image {
+          width: 100px;
+          height: auto;
+          border-radius: 8px;
+          border: 1px solid #ddd;
+          transition: transform 0.2s;
+
+          &:hover {
+            transform: scale(1.05);
+            cursor: pointer;
+            border-color: #007bff;
           }
         }
       }
-  
-      .product-info {
-        flex: 1; // Chiếm không gian còn lại
+
+      .large-image {
+        .main-image {
+          width: 100%;
+          max-width: 600px;
+          height: auto;
+          border-radius: 8px;
+          border: 1px solid #ddd;
+        }
+      }
+    }
+
+    .product-info {
+      display: flex;
+      flex-direction: column;
+
+      .product-name {
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      .pricing {
+        margin: 10px 0;
+
+        .current-price {
+          font-size: 20px;
+          color: #007bff;
+          font-weight: bold;
+        }
+
+        .original-price {
+          font-size: 16px;
+          color: #999;
+          text-decoration: line-through;
+          margin-left: 10px;
+        }
+      }
+
+      .description {
+        margin: 10px 0;
+        font-size: 16px;
+        color: #333;
+      }
+
+      .bid-info {
         display: flex;
         flex-direction: column;
-  
-        .store-header {
-          display: flex;
-          align-items: center;
-          margin-bottom: 15px;
-  
-          .store-logo {
-            width: 50px; // Kích thước logo cửa hàng
-            height: 50px;
-            border-radius: 50%;
-            margin-right: 10px;
-          }
-  
-          .product-name {
-            font-size: 24px;
-            font-weight: bold;
-          }
-        }
-  
-        .pricing {
-          margin: 10px 0;
-  
-          .current-price {
-            font-size: 20px;
-            color: #007bff;
-            font-weight: bold;
-          }
-  
-          .original-price {
-            font-size: 16px;
-            color: #999;
-            text-decoration: line-through;
-            margin-left: 10px;
-          }
-        }
-  
-        .description {
-          margin: 10px 0;
-          font-size: 16px;
-          color: #333;
-        }
-  
-        .bid-info {
-          display: flex;
-          flex-direction: column;
-          margin: 10px 0;
-  
-          p {
-            margin: 5px 0;
-          }
-  
-          .bid-button,
-          .watchlist-button
-          {
-            margin-top: 5px;
-            margin-right: 15px;
-          }
+        margin: 10px 0;
 
-          .buy-now-button
-          {
-            margin-top: 5px;
-            margin-right: 15px;
-            background-color: rgb(78, 149, 255);
-
-            &:hover 
-            {
-              background-color: rgb(118, 167, 241);
-            }
-          }
-        }
-  
-        .shipping-info,
-        .delivery-info,
-        .payment-methods {
+        p {
           margin: 5px 0;
-          font-size: 14px;
-          color: #555;
+        }
+
+        .bid-button,
+        .watchlist-button {
+          margin-top: 5px;
+          margin-right: 15px;
+        }
+
+        .buy-now-button {
+          margin-top: 5px;
+          margin-right: 15px;
+          background-color: rgb(78, 149, 255);
+
+          &:hover {
+            background-color: rgb(118, 167, 241);
+          }
         }
       }
     }
-  
-      
-      
   }
 
-  .bid-details {
-    text-align: center;
-    font-size: 14px;
-  
-    .suggested-bids {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin: 10px 0;
-  
-      .bid-suggest {
-        background-color: #007bff; // Màu xanh
-        color: white;
-        flex: 1; // Kéo dài các nút
+  // Responsive Design
+  @media (max-width: 1200px) {
+    .product-content {
+      grid-template-columns: 1fr; // 1 cột cho các màn hình nhỏ hơn 1200px
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .product-images {
+      grid-template-columns: 1fr;
+      gap: 20px;
+
+      .additional-images {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .small-image {
+          width: 80px; // Giảm kích thước ảnh nhỏ cho màn hình nhỏ
+        }
+      }
+
+      .large-image {
+        .main-image {
+          width: 100%; // Chiếm hết chiều ngang màn hình
+          max-width: 500px;
+        }
       }
     }
-  
-    .divider {
-      margin: 15px 0;
+
+    .product-info {
+      .product-name {
+        font-size: 20px;
+      }
+
+      .pricing .current-price {
+        font-size: 18px;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .breadcrumb {
       font-size: 12px;
-      color: #999;
     }
-  
-    .custom-bid {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin: 10px 0;
-  
-      .bid-custom-button {
-        flex: 1; // Kéo dài nút Bid
-        background-color: #007bff; // Màu xanh
-        color: white;
+
+    .advertisement-bar {
+      padding: 5px;
+      font-size: 12px;
+    }
+
+    .product-content {
+      grid-template-columns: 1fr;
+    }
+
+    .product-info {
+      .product-name {
+        font-size: 18px;
+      }
+
+      .pricing .current-price {
+        font-size: 16px;
       }
     }
-    
-
-
-    p {
-        font-weight: 500;
-    }
-  
   }
-  
+}
