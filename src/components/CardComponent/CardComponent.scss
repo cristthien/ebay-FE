@@ -1,4 +1,6 @@
 .card-container {
+    height: 400px;
+
     position: relative;
     .heart-icon {
       position: absolute;
@@ -27,5 +29,9 @@
       color: rgb(128, 128, 137);
       text-decoration: line-through;
     }
+    img {
+      height: 250px;
+    }
+    
   }
   

@@ -1,6 +1,5 @@
 import React from 'react';
 import SliderComponent from '../../components/SliderComponent/SliderComponent';
-import { TypeProduct } from '../../components/TypeProduct/TypeProduct';
 import ProductShowcase from '../ProductShowcase/ProductShowcase'; // Import mới
 import './HomePage.scss'; // Import file SCSS
 import slider1 from '../../assets/images/slider1.png';

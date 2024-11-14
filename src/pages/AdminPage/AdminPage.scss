@@ -1,0 +1,56 @@
+.admin-page {
+    height: 100vh;
+}
+
+.sidebar {
+    background-color: #f0f2f5;
+    .logo {
+        color: #1890ff;
+        font-size: 24px;
+        text-align: center;
+        padding: 16px 0;
+        font-weight: bold;
+    }
+    .ant-menu-item-selected {
+        background-color: #e6f7ff;
+    }
+}
+
+.header {
+    background: #fff;
+    padding: 0 24px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .header-right {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        .username {
+            font-weight: 500;
+        }
+    }
+}
+
+.content {
+    padding: 24px;
+    background-color: #f9f9f9;
+    .table-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 16px;
+    }
+    .ant-table {
+        background: #fff;
+        .action-buttons {
+            display: flex;
+            gap: 8px;
+            .ant-btn {
+                padding: 0 8px;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+}

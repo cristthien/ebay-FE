@@ -4,7 +4,8 @@ import { useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { Button, Rate, Modal, Input } from 'antd';
 import HeaderComponent from '../../components/HeaderComponent/HeaderComponent';
-import SuggestedProductsComponent from '../../components/SuggestedProductsComponent/SuggestedProductsComponent';
+//import SuggestedProductsComponent from '../../components/SuggestedProductsComponent/SuggestedProductsComponent';
+import ProductShowcase from '../ProductShowcase/ProductShowcase';
 import AboutItemComponent from '../../components/AboutItemComponent/AboutItemComponent';
 import './ProductDetailComponent.scss';
 import FooterComponent from '../../components/FooterComponent/FooterComponent';
@@ -56,13 +57,13 @@ const ProductDetailComponent = () => {
     },
   };
 
-  const suggestedProducts = [
-    { id: '1', name: 'Similar Product 1', price: '8,000,000 VND', priceoriginal: '9,500,000 VND', image: 'https://via.placeholder.com/150' },
-    { id: '2', name: 'Similar Product 2', price: '7,500,000 VND', priceoriginal: '8,500,000 VND', image: 'https://via.placeholder.com/150' },
-    { id: '3', name: 'Similar Product 3', price: '6,000,000 VND', priceoriginal: '7,000,000 VND', image: 'https://via.placeholder.com/150' },
-    { id: '4', name: 'Similar Product 4', price: '6,000,000 VND', priceoriginal: '7,000,000 VND', image: 'https://via.placeholder.com/150' },
-    { id: '5', name: 'Similar Product 5', price: '6,000,000 VND', priceoriginal: '7,000,000 VND', image: 'https://via.placeholder.com/150' },
-  ];
+  // const suggestedProducts = [
+  //   { id: '1', name: 'Similar Product 1', price: '8,000,000 VND', priceoriginal: '9,500,000 VND', image: 'https://via.placeholder.com/150' },
+  //   { id: '2', name: 'Similar Product 2', price: '7,500,000 VND', priceoriginal: '8,500,000 VND', image: 'https://via.placeholder.com/150' },
+  //   { id: '3', name: 'Similar Product 3', price: '6,000,000 VND', priceoriginal: '7,000,000 VND', image: 'https://via.placeholder.com/150' },
+  //   { id: '4', name: 'Similar Product 4', price: '6,000,000 VND', priceoriginal: '7,000,000 VND', image: 'https://via.placeholder.com/150' },
+  //   { id: '5', name: 'Similar Product 5', price: '6,000,000 VND', priceoriginal: '7,000,000 VND', image: 'https://via.placeholder.com/150' },
+  // ];
 
   const handleBidClick = () => {
     setIsModalVisible(true);
@@ -95,16 +96,20 @@ const ProductDetailComponent = () => {
               <img
                 key={index}
                 src={src}
-                alt={`Additional Image ${index + 1}`}
+                alt={`Additional ${index + 1}`}
                 className="small-image"
                 onClick={() => setMainImage(src)}
               />
             ))}
           </div>
+
+
           <div className="large-image">
             <img src={mainImage} alt="Product Large" className="main-image" />
           </div>
+
         </div>
+        
 
         <div className="product-info">
           <h1 className="product-name">{product.name}</h1>
@@ -121,9 +126,13 @@ const ProductDetailComponent = () => {
             <Button type="default" className="watchlist-button">Add to Watchlist</Button>
           </div>
         </div>
+
       </div>
 
-      <SuggestedProductsComponent suggestedProducts={suggestedProducts} />
+      {/* <SuggestedProductsComponent suggestedProducts={suggestedProducts} /> */}
+      <div className="product-showcase-container">
+        <ProductShowcase /> 
+      </div>
       <AboutItemComponent itemDetails={itemDetails} />
       <div className="footer-component-container">
         <FooterComponent /> 

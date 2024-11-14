@@ -1,15 +1,18 @@
 .product-showcase-container {
-  padding: 20px;
+  padding-top: 50px;
+
 
   // Style cho các tiêu đề
   h2 {
     font-size: 1.8rem; // Tăng kích thước chữ
     font-weight: 700; // Đậm hơn
     color: #333; // Màu tối sang trọng
+    margin-top: 20px;
     margin-bottom: 20px;
     position: relative;
     text-transform: uppercase; // Chữ in hoa để nhấn mạnh
     letter-spacing: 1px; // Khoảng cách giữa các chữ cái
+
 
     // Đường viền dưới để tạo điểm nhấn
     &::after {
@@ -24,10 +27,11 @@
     }
   }
 
+  
   .product-row {
     display: flex;
     overflow-x: auto; // Cho phép cuộn ngang
-    gap: 10px; // Khoảng cách giữa các sản phẩm
+    gap: 20px; // Khoảng cách giữa các sản phẩm
     cursor: grab; // Đổi con trỏ chuột khi rê qua
     padding: 10px 0;
   }
@@ -66,6 +70,8 @@
       color: #555; // Đổi màu chữ khi hover
     }
   }
+
+
 }
 
 

@@ -11,8 +11,8 @@ const StorePricingPage = () => {
     const [buyItNowEnabled, setBuyItNowEnabled] = useState(false);
     const [buyItNowPrice, setBuyItNowPrice] = useState('');
     const [startTimeOption, setStartTimeOption] = useState('Start immediately');
-    const [startDate, setStartDate] = useState(null);
-    const [startTime, setStartTime] = useState(null);
+    const [setStartDate] = useState(null);
+    const [setStartTime] = useState(null);
     const [reservePriceOption, setReservePriceOption] = useState('Not selected');
     const [reservePrice, setReservePrice] = useState('');
 
